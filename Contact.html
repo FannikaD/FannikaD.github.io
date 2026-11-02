@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auckland Pallet Sales</title>
+    <meta name="description" content="The Pallet Guy is an Auckland based pallet collection business that picks up wooden and plastic pallets recycling them and giving them a second life.">
+    <!-- Link the CSS design sheet -->
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <nav id="navbar">
+      <img id="header-img" src="Logo.png">
+      <ul>
+        <li><a href="Home.html">Home page</a></li>
+        <li><a href="Pallet-Collection-Services.html">How it works</a></li>
+        <li><a href="Wooden-Pallet-Collections.html">Wooden Pallet Collections</a></li>
+        <li><a href="Plastic-Pallet-Collections.html">Plastic Pallet Collections</a></li>
+        <li><a href="Commercial-Collections.html">Commercial Collections</a></li>
+        <li><a href="Areas-We-Service.html">Areas We Service</a></li>
+        <li><a href="About-Us.html">About us</a></li>
+        <li><a href="Contact.html">Contact/Book</a></li>
+      </ul>
+    </nav>
+
+    <h1>Fill out a contact form below:</h1>
+
+    <form id="request" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="7cbbb0e0-6e16-461c-8761-504bc1d5c0fe">
+        <div>
+            <label for="company">Company Name</label><p id='red'>*</p>
+            <input id="company" type="text" name="company" />
+        </div>
+        <div>
+            <label for="contact-name">Contact Person</label><p id='red'>*</p>
+            <input id="contact-name" type="text" name="contact-name" required/>
+        </div>
+        <div>
+            <label for="email">Email</label><p id='red'>*</p>
+            <input id="email" type="email" name="email" required/>
+        </div>
+        <div>
+            <label for="number">Phone Number</label><p id='red'>*</p>
+            <input id="number" type="tel" name="number" required/>
+        </div>
+        <div>
+            <label for="street">Street Address</label><p id='red'>*</p>
+            <input type="text" id="street" name="street" autocomplete="street-address" required>
+            <label for="city">City</label><p id='red'>*</p>
+            <input type="text" id="city" name="city" autocomplete="address-level2" required>
+        </div>
+        <div>
+            <label for="quantity">Amount of pallets</label><p id='red'>*</p>
+            <input id="quantity" type="number" name="quantity" required>
+        </div>
+        <div>
+            <label for="type">Pallet types</label><p id='red'>*</p>
+            <select name="type" id="type" required>
+                <option value="wood">Wooden</option>
+                <option value="plastic">Plastic</option>
+                <option value="mixed">Mixed</option>
+            </select>
+        </div>
+        <div>
+            <label for="condition">Condition of the pallets</label><p id='red'>*</p>
+            <select name="condition" id="condition" required>
+                <option value="good">Good</option>
+                <option value="Fair">Fair</option>
+                <option value="mixed">Mixed</option>
+                <option value="broken">Broken</option>
+            </select>
+        </div>
+        <div>
+            <label for="frequency">One-off or regular</label><p id='red'>*</p>
+            <select name="frequency" id="frequency" required>
+                <option value="oneTime">One-off Collection</option>
+                <option value="regular">Regular ongoing pickups</option>
+            </select>
+        </div>
+        <div>
+            <label for="forklift">Is there a forklift on site</label><p id='red'>*</p>
+            <select name="forklift" id="forklift" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div>
+            <label for="date">Preffered collection day if applicable</label>
+            <select id="weekday" name="weekday">
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thurday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+                <option value="sunday">Sunday</option>
+            </select>
+        </div>
+        <div>
+            <label for="photo-upload">Choose photos:</label>
+            <input type="file" id="photo-upload" name="photo" accept="image/*"/>
+        </div>
+        <div>
+            <button type="submit" id="button">Request</button>
+        </div>
+    </form>
+    
+    <script src="script.js">
+                
+const company = document.getElementById("company");
+const Btn = document.querySelector("#button");
+const message = "Congratulations! Your form has been submitted. We will get back to you as soon as possible.";
+const contact = document.getElementById("contact-name");
+const Email = document.getElementById("email");
+const number = document.getElementById("number");
+const street = document.getElementById("street");
+const quantity = document.getElementById("quantity");
+const form = document.getElementById('request');
+
+Btn.addEventListener("click", () => {
+    if (company.value === null || company.value === "") {
+        alert("Please enter your companys name.");
+        return;
+    }else if (contact.value === null || contact.value === "") {
+        alert("Please enter your contacts name.");
+        return;
+    }else if (Email.value === null || Email.value === "") {
+        alert("Please enter your contact email.");
+        return;
+    }else if (number.value === null || number.value === "") {
+        alert("Please enter your contact phone number.");
+        return;
+    }else if (street.value === null || street.value === "") {
+        alert("Please enter your street address.");
+        return;
+    }else if (quantity.value === null || quantity.value === "" || quantity.value===null || quantity.value<=0) {
+        alert("Please enter the amount of pallets for pickup.");
+        return;
+    }else {
+        form.submit();
+        alert("Thank you for your submission, " + orderName.value + ". We will get back to you as soon as possible.");
+        return;
+    }
+}
+)
+    </script>
+
+</body>
+<footer>
+    <div id="footer-container">
+        <div id="footer-column">
+            <h3>Contact Us</h3>
+            <p>Email: <a href='mailto:pickup@thepalletguy.co.nz'>pickup@thepalletguy.co.nz</a></p>
+            <p>Call us: <a href="tel:+6421334095">+64 021 334 095</a></p>
+            <p><a href="Areas-We-Service.html">Areas We Service</a></p>
+        </div>
+    </div>
+    <div id="footer-bottom">
+        <p>© 2026 The Pallet Guy</p>
+    </div>
+</footer>
+</html>

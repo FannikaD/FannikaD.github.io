@@ -1,0 +1,139 @@
+body {
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 0px;
+    margin: 0;
+}
+
+#bold{
+    font-weight: bold;
+}
+
+.banner{
+    background-color: rgba(19, 35, 64,0.9);
+    padding: 2%;
+    color: floralwhite;
+}
+
+#header-img{
+  display:inline-block;
+  justify-content:left;
+  text-align:left;
+  width:6rem;
+  height:6rem;
+}
+
+#navbar ul {
+  display: flex;
+  list-style-type: none;
+  gap: 0.7rem;
+  width: 90%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 0.1rem;
+}
+
+#navbar{
+  overflow-x:hidden;
+  gap: 0rem;
+  z-index:1;
+  top:0px;
+  min-width:auto;
+  max-width: 100%;
+  text-align: center;
+  background-color:rgb(19, 35, 64);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #f0f4f8;
+  display: flex;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  a:visited {
+    color:#f0f4f8;
+    text-decoration: none;
+    }
+  a:link {
+      color:#f0f4f8;
+    text-decoration: none;
+  }
+}
+
+a:link{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(19, 35, 64);
+    color: #fff;
+    padding: 40px 20px;
+}
+
+#footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to stack on small screens */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(19, 35, 64);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#red{
+    color:red;
+    display: inline;
+}
+
+form{
+    border-color: rgb(19, 35, 64);
+    border-width: 15px;
+    border-style: solid;
+    padding: 15px;
+    line-height: 1.6rem;
+}
+
+label{
+    display: inline;
+}
+
+button{
+    background-color: rgb(19, 35, 64);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #f0f4f8;
+    font-size: 15px;
+    width:5rem;
+    height:3rem;
+}
+
+@media screen and (max-width:480px) {
+    #navbar{
+        gap:5px;
+        font-size: 8px;
+    }
+    #header-img{
+        width:60px;
+        height:60px;
+    }
+}
